@@ -9,6 +9,7 @@ public class Ladder : MonoBehaviour
    bool inside = false;
    [SerializeField] float speedUpDown = 3.2f;
    [SerializeField] FirstPersonController FPSInput;
+   
 
    private void Start() {
     FPSInput = GetComponent<FirstPersonController>();
@@ -19,6 +20,7 @@ public class Ladder : MonoBehaviour
     if(other.gameObject.tag == "Ladder"){
         FPSInput.enabled = false;
         inside = !inside;
+        Debug.Log("testi");
     }
    }
 
