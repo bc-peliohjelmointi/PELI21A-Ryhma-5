@@ -1780,12 +1780,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: MoveSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: JumpHeight
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: SprintSpeed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Name
@@ -1846,6 +1850,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1165347257}
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1165347264}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!4 &687257904 stripped
 Transform:
@@ -2058,26 +2065,6 @@ CapsuleCollider:
   m_Height: 1.2028917
   m_Direction: 1
   m_Center: {x: 0.000015254747, y: -0.0000048795596, z: 1.076616}
---- !u!1 &804499536 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3831019648159348582, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
-  m_PrefabInstance: {fileID: 1205943416}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &804499542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804499536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c8b1987f554d6049b4334f7dbb03ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1165347263}
-  speedUpDown: 3.2
-  FPSInput: {fileID: 0}
 --- !u!850595691 &812345493
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -7577,6 +7564,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 662950198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1165347264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165347256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8b1987f554d6049b4334f7dbb03ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1165347263}
+  speedUpDown: 3.2
+  FPSInput: {fileID: 0}
 --- !u!1001 &1205943416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7589,6 +7591,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HideOut
       objectReference: {fileID: 0}
+    - target: {fileID: 3831019648159348580, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831019648159348580, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831019648159348580, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3831019648159348582, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
       propertyPath: m_TagString
       value: Ladder
@@ -7596,6 +7610,14 @@ PrefabInstance:
     - target: {fileID: 3831019648159348583, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831019648159348583, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831019648159348583, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3831019648159348587, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
       propertyPath: m_LocalScale.y
@@ -7695,10 +7717,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9137428915265924944, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1159663580}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3831019648159348582, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 804499542}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 696e59b6d0b879946a6111454c3205ab, type: 3}
 --- !u!1001 &1208925086
 PrefabInstance:

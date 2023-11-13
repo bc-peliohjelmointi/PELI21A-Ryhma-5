@@ -6,38 +6,39 @@ using StarterAssets;
 public class Ladder : MonoBehaviour
 {
    [SerializeField] Transform playerController;
-   bool inside = false;
+   bool canClimb = false;
    [SerializeField] float speedUpDown = 3.2f;
    [SerializeField] FirstPersonController FPSInput;
    
 
    private void Start() {
     FPSInput = GetComponent<FirstPersonController>();
-    inside = false;
+    canClimb = false;
    }
 
    private void OnTriggerEnter(Collider other) {
-    if(other.gameObject.tag == "Ladder"){
-        FPSInput.enabled = false;
-        inside = !inside;
+    if(other.tag == "Ladder"){
         Debug.Log("testi");
+        FPSInput.enabled = false;
+        canClimb = !canClimb;
     }
    }
 
    void OnTriggerExit(Collider other){
-    if(other.gameObject.tag == "Ladder"){
+    if(other.tag == "Ladder"){
         FPSInput.enabled = true;
-        inside = !inside;
+        canClimb = !canClimb;
     }
    }
+   
 
    private void Update() {
-    if(inside == true && Input.GetKey("w")){
-        playerController.transform.position += Vector3.up * speedUpDown * Time.deltaTime;
+    if(canClimb == true && Input.GetKey("W")){
+        playerController.transform.position += Vector3.up / speedUpDown * Time.deltaTime;
     }
 
-    if (inside == true && Input.GetKey("s")){
-        playerController.transform.position += Vector3.down * speedUpDown * Time.deltaTime;
+    if (canClimb == true && Input.GetKey("S")){
+        playerController.transform.position += Vector3.down / speedUpDown * Time.deltaTime;
     }
    }
 }
