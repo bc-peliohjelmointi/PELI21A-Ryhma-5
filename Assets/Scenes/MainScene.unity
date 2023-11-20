@@ -205,7 +205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &82372105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -238,9 +238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce1a560b366bf8448e69fabecbca275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
-  textSpeed: 0
-  lines: []
+  textComponent: {fileID: 1141812472}
+  textSpeed: 0.1
+  lines:
+  - 'Friend: Yo bro, you finally made it here!'
+  - 'Me: Well, it was a long trip, but i hope it''s worth it.'
+  - 'Friend: You must be hungry after all that travelling and hiking. I might have
+    spare sandwich laying around somewhere inside. Go grab yourself a bite.'
 --- !u!114 &82372107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7764,7 +7768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7935,6 +7939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6773dfedfc0ae2b49aa967a9d3075e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 82372104}
 --- !u!4 &1165347263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
@@ -13581,6 +13586,10 @@ PrefabInstance:
     - target: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_Name
       value: skinless zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4850532169630706798, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_Enabled
