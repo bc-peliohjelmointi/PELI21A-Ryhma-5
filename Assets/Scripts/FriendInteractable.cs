@@ -9,6 +9,5 @@ public class FriendInteractable : MonoBehaviour
    public void Interact()
     {
         transform.LookAt(player);
-        Debug.Log("Interact!");
     }
 }
