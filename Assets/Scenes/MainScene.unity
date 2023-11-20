@@ -245,6 +245,7 @@ MonoBehaviour:
   - 'Me: Well, it was a long trip, but i hope it''s worth it.'
   - 'Friend: You must be hungry after all that travelling and hiking. I might have
     spare sandwich laying around somewhere inside. Go grab yourself a bite.'
+  dialogueActive: 0
 --- !u!114 &82372107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13686,7 +13687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1027175079354532261, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4850532169630706798, guid: 6a57508ea9f1a2e4ba69675cdd7361e3, type: 3}
       propertyPath: m_Enabled
