@@ -10,9 +10,10 @@ public class Dialogue : MonoBehaviour
     [SerializeField] float textSpeed; 
     [SerializeField] string[] lines;
 
-    public bool dialogueActive;
+    public bool dialogueActive = false;
 
     private int index;
+   // private FirstPersonController FPSInput;
 
     void StartDialogue(){
         dialogueActive= true;
@@ -24,6 +25,7 @@ public class Dialogue : MonoBehaviour
     {
         textComponent.text = string.Empty;
         StartDialogue();
+        //FPSInput = GetComponent<FirstPersonController>();
     }
 
     void Update()
@@ -38,7 +40,7 @@ public class Dialogue : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];  
+                textComponent.text = lines[index];
             }
         }
     }
@@ -65,5 +67,4 @@ public class Dialogue : MonoBehaviour
             dialogueActive= false;
         }
     }
-   
 }
