@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 public class AIController : MonoBehaviour
 {
 
     public Transform Player;
+    public GameObject ThePlayer;
+    public AudioSource Scream;
+    public GameObject JumpZombie;
+    public GameObject flashImg;
     public int MoveSpeed = 9;
     int MaxDist = 100;
     int MinDist = 0;
@@ -15,7 +20,8 @@ public class AIController : MonoBehaviour
 
     void Start()
     {
-
+        JumpZombie.SetActive(false);
+        flashImg.SetActive(false);
     }
 
     void Update()
@@ -36,4 +42,18 @@ public class AIController : MonoBehaviour
 
         }
     }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Scream.Play();
+            JumpZombie.SetActive(true);
+            flashImg.SetActive(true);
+            ThePlayer.SetActive(false);
+            Destroy(gameObject);
+        }
+        
+    }
+
 }
