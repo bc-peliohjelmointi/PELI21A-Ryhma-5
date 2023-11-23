@@ -6,11 +6,15 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    [SerializeField] GameObject dialogueBox;
+    public GameObject dialogueBox;
+
+    private FirstPersonController FPSInput;
+    private Dialogue dialogue;
 
     private void Start()
     {
         dialogueBox.SetActive(false);
+        FPSInput = GetComponent<FirstPersonController>();
     }
     private void Update()
     {
@@ -23,9 +27,17 @@ public class PlayerInteract : MonoBehaviour
                 if (collider.TryGetComponent(out FriendInteractable friendInteractable))
                 {
                     dialogueBox.SetActive(true);
+                    FPSInput.MoveSpeed = 0;
+                    FPSInput.SprintSpeed= 0;
                     friendInteractable.Interact();
                 }
             }
+        }
+
+        if(dialogueBox.activeSelf == false)
+        {
+            FPSInput.MoveSpeed = 4;
+            FPSInput.SprintSpeed = 8;
         }
     }
 

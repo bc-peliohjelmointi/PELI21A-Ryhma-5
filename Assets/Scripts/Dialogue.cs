@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using StarterAssets;
 
 public class Dialogue : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class Dialogue : MonoBehaviour
     public bool dialogueActive = false;
 
     private int index;
-   // private FirstPersonController FPSInput;
 
     void StartDialogue(){
         dialogueActive= true;
@@ -25,7 +23,6 @@ public class Dialogue : MonoBehaviour
     {
         textComponent.text = string.Empty;
         StartDialogue();
-        //FPSInput = GetComponent<FirstPersonController>();
     }
 
     void Update()
