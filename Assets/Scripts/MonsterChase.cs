@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class AIController : MonoBehaviour
 {
@@ -53,7 +55,5 @@ public class AIController : MonoBehaviour
             ThePlayer.SetActive(false);
             Destroy(gameObject);
         }
-        
     }
-
 }
