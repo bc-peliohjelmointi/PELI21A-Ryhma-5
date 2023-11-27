@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Ladder
+  - Food
   layers:
   - Default
   - TransparentFX
