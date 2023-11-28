@@ -8,6 +8,8 @@ public class EatFood : MonoBehaviour
     Camera cam;
     [SerializeField] GameObject eatFoodUI;
     [SerializeField] GameObject food;
+    Vector3 mousePos;
+    public bool hasPressedE = false;
 
     private void Start()
     {
@@ -15,27 +17,33 @@ public class EatFood : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 100f;
-        mousePos = cam.ScreenToWorldPoint(mousePos);
+        InteractWithObjects(mousePos, mask, eatFoodUI, food, cam);
+    }
+
+    public void InteractWithObjects(Vector3 pos, LayerMask mask, GameObject UI, GameObject item, Camera cam)
+    {
+        pos = Input.mousePosition;
+        pos.z = 100f;
+        pos = cam.ScreenToWorldPoint(pos);
         //Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100, mask))
+        if (Physics.Raycast(ray, out hit, 2, mask))
         {
-            eatFoodUI.SetActive(true);
+            UI.SetActive(true);
         }
 
         else
         {
-            eatFoodUI.SetActive(false);
+            UI.SetActive(false);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if(Physics.Raycast(ray, out hit, 100, mask)) 
+            if (Physics.Raycast(ray, out hit, 2, mask))
             {
-                food.SetActive(false);
+                hasPressedE = true;
+                item.SetActive(false);
             }
         }
     }
