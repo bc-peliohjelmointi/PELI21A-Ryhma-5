@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1463332165799828768}
   - component: {fileID: 1463332165798501632}
   - component: {fileID: 1463332165797535680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: coke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1463332165799828770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: french frice
   m_TagString: Food
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1463332165799828772}
   - component: {fileID: 1463332165798501634}
   - component: {fileID: 1463332165797535682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: french_frice_packet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 1463332165799828774}
   - component: {fileID: 1463332165798501636}
   - component: {fileID: 1463332165797535684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: french_fries_set
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 1463332165799828776}
   - component: {fileID: 1463332165798501638}
   - component: {fileID: 1463332165797535686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ketch Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
