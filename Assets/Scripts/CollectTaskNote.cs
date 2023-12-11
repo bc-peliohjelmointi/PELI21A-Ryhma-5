@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
+using static UnityEditor.Progress;
 
 public class CollectTaskNote : MonoBehaviour
 {
@@ -8,24 +10,42 @@ public class CollectTaskNote : MonoBehaviour
     [SerializeField] GameObject taskList;
     [SerializeField] GameObject note;
     [SerializeField] GameObject pickUpNote;
-    EatFood eatFoodScript;
+    //EatFood eatFoodScript;
     Camera cam;
     Vector3 mousePos;
 
     private void Start()
     {
         cam = Camera.main;
-        eatFoodScript = GetComponent<EatFood>();
+        //eatFoodScript = GetComponent<EatFood>();
     }
 
     private void FixedUpdate()
     {
-        eatFoodScript.InteractWithObjects(mousePos, mask, pickUpNote, note, cam);
+        //eatFoodScript.InteractWithObjects(mousePos, mask, pickUpNote, note, cam);
 
-        if (eatFoodScript.hasPressedE)
+        mousePos = Input.mousePosition;
+        mousePos.z = 100f;
+        mousePos = cam.ScreenToWorldPoint(mousePos);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 2, mask))
         {
-            taskList.SetActive(true); ;
+            pickUpNote.SetActive(true);
         }
-        
+
+        else
+        {
+            pickUpNote.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Physics.Raycast(ray, out hit, 2, mask))
+            {
+                note.SetActive(false);
+                taskList.SetActive(true);
+            }
+        }
     }
 }

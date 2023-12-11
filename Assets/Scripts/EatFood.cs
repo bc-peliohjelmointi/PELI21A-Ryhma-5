@@ -9,7 +9,6 @@ public class EatFood : MonoBehaviour
     [SerializeField] GameObject eatFoodUI;
     [SerializeField] GameObject food;
     Vector3 mousePos;
-    public bool hasPressedE = false;
 
     private void Start()
     {
@@ -42,7 +41,6 @@ public class EatFood : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 2, mask))
             {
-                hasPressedE = true;
                 item.SetActive(false);
             }
         }
