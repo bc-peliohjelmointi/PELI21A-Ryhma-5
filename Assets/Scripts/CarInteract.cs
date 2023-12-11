@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarInteract : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class CarInteract : MonoBehaviour
 
     private void Start()
     {
-        cam = GetComponent<Camera>();
+        cam = Camera.main;
         eatFoodScript = GetComponent<EatFood>();
 
     }
@@ -21,5 +22,10 @@ public class CarInteract : MonoBehaviour
     private void FixedUpdate()
     {
         eatFoodScript.InteractWithObjects(mousePos, mask, pressEText, car, cam);
+
+        if(car.activeSelf == false)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 }
