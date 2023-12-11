@@ -6,7 +6,11 @@ public class CollectFirewood : MonoBehaviour
 {
     [SerializeField] LayerMask mask;
     [SerializeField] GameObject taskList;
-    [SerializeField] GameObject fireWood;
+    [SerializeField] GameObject fireWood1;
+    [SerializeField] GameObject fireWood2;
+    [SerializeField] GameObject fireWood3;
+    [SerializeField] GameObject fireWood4;
+    [SerializeField] GameObject fireWood5;
     [SerializeField] GameObject pickUpFireWood;
     EatFood eatFoodScript;
     Camera cam;
@@ -22,7 +26,11 @@ public class CollectFirewood : MonoBehaviour
     {
         if(taskList.activeSelf == true)
         {
-            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood, cam);
+            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood1, cam);
+            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood2, cam);
+            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood3, cam);
+            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood4, cam);
+            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood5, cam);
         }
     }
 }
