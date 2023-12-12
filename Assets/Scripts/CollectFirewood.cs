@@ -18,19 +18,20 @@ public class CollectFirewood : MonoBehaviour
 
     private void Start()
     {
-        cam = GetComponent<Camera>();
+        cam = Camera.main;
         eatFoodScript = GetComponent<EatFood>();
     }
 
     private void FixedUpdate()
     {
-        if(taskList.activeSelf == true)
+        if (taskList.activeSelf == true)
         {
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood1, cam);
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood2, cam);
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood3, cam);
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood4, cam);
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood5, cam);
+           
         }
     }
 }
