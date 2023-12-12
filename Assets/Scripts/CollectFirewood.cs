@@ -6,11 +6,11 @@ public class CollectFirewood : MonoBehaviour
 {
     [SerializeField] LayerMask mask;
     [SerializeField] GameObject taskList;
-    [SerializeField] GameObject fireWood1;
-    [SerializeField] GameObject fireWood2;
-    [SerializeField] GameObject fireWood3;
-    [SerializeField] GameObject fireWood4;
-    [SerializeField] GameObject fireWood5;
+    public GameObject fireWood1;
+    public GameObject fireWood2;
+    public GameObject fireWood3;
+    public GameObject fireWood4;
+    public GameObject fireWood5;
     [SerializeField] GameObject pickUpFireWood;
     EatFood eatFoodScript;
     Camera cam;
