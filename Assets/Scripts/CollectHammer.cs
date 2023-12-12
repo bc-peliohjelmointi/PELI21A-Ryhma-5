@@ -8,6 +8,7 @@ public class CollectHammer : MonoBehaviour
     [SerializeField] GameObject taskList;
     [SerializeField] GameObject hammer;
     [SerializeField] GameObject pickUpHammer;
+    [SerializeField] GameObject investigateNoiseUI;
     EatFood eatFoodScript;
     CollectFirewood fireWoodScript;
     Camera cam;
@@ -34,6 +35,7 @@ public class CollectHammer : MonoBehaviour
             && fireWoodScript.fireWood3.activeSelf == false && fireWoodScript.fireWood4.activeSelf == false && fireWoodScript.fireWood5.activeSelf == false )
         {
             taskList.SetActive(false);
+            investigateNoiseUI.SetActive(true);
         }
     }
 }
