@@ -9678,7 +9678,7 @@ MonoBehaviour:
     m_Bits: 2048
   car: {fileID: 1215768774}
   pressEText: {fileID: 946749362}
-  monster: {fileID: 0}
+  monster: {fileID: 1431384318}
 --- !u!1001 &1205943416
 PrefabInstance:
   m_ObjectHideFlags: 0

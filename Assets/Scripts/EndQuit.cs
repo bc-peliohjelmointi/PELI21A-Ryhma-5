@@ -7,7 +7,6 @@ public class EndQuit : MonoBehaviour
 {
     public void QuitGame()
     {
-        Debug.Log("QUIT!");
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }

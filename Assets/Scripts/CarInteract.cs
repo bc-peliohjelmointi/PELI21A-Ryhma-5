@@ -28,7 +28,7 @@ public class CarInteract : MonoBehaviour
 
             if (car.activeSelf == false)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
     }
