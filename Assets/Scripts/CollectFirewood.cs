@@ -28,17 +28,29 @@ public class CollectFirewood : MonoBehaviour
 
     private void Update()
     {
-        if (taskList.activeSelf == true)
+        
+          if (taskList.activeSelf == true)
         {
-            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood1, cam);
-            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood2, cam);
-            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood3, cam);
-            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood4, cam);
-            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood5, cam);
+            CheckFirewoodCollection(fireWood1);
+            CheckFirewoodCollection(fireWood2);
+            CheckFirewoodCollection(fireWood3);
+            CheckFirewoodCollection(fireWood4);
+            CheckFirewoodCollection(fireWood5);
         }
+        
+        
         if (fireWood1.activeSelf == false && fireWood2.activeSelf == false && fireWood3.activeSelf == false && fireWood4.activeSelf == false && fireWood5.activeSelf == false && hammerScript.hammer.activeSelf == true)
         {
-            taskText.text = "- Retrieve hammer from the shed";       
+            taskText.text = "- Retrieve hammer from the shed";    
+            pickUpFireWood.SetActive(false);
+        }
+    }
+
+    private void CheckFirewoodCollection(GameObject fireWood)
+    {
+        if (fireWood.activeSelf)
+        {
+            eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood, cam);
         }
     }
 }

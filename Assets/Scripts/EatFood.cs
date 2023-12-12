@@ -16,7 +16,10 @@ public class EatFood : MonoBehaviour
     }
     private void Update()
     {
-        InteractWithObjects(mousePos, mask, eatFoodUI, food, cam);
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            InteractWithObjects(mousePos, mask, eatFoodUI, food, cam);
+        }
     }
 
     public void InteractWithObjects(Vector3 pos, LayerMask mask, GameObject UI, GameObject item, Camera cam)
@@ -29,7 +32,10 @@ public class EatFood : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 2, mask))
         {
-            UI.SetActive(true);
+            if(hit.collider.gameObject == item)
+            {
+                UI.SetActive(true);
+            }
         }
 
         else
@@ -41,7 +47,10 @@ public class EatFood : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 2, mask))
             {
-                item.SetActive(false);
+                if(hit.collider.gameObject == item)
+                {
+                    item.SetActive(false);
+                }
             }
         }
     }
