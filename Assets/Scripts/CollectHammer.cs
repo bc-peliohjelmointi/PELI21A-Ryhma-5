@@ -35,8 +35,8 @@ public class CollectHammer : MonoBehaviour
             && fireWoodScript.fireWood3.activeSelf == false && fireWoodScript.fireWood4.activeSelf == false && fireWoodScript.fireWood5.activeSelf == false )
         {
             taskList.SetActive(false);
-            pickUpHammer.SetActive(false);
             investigateNoiseUI.SetActive(true);
+            pickUpHammer.SetActive(false);
         }
     }
 }
