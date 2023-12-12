@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CollectHammer : MonoBehaviour
 {
     [SerializeField] LayerMask mask;
     [SerializeField] GameObject taskList;
-    [SerializeField] GameObject hammer;
+    public GameObject hammer;
     [SerializeField] GameObject pickUpHammer;
     [SerializeField] GameObject investigateNoiseUI;
+    [SerializeField] TMP_Text taskText;
+    [SerializeField] GameObject pickUpFireWood;
     EatFood eatFoodScript;
     CollectFirewood fireWoodScript;
     Camera cam;
@@ -21,22 +24,26 @@ public class CollectHammer : MonoBehaviour
         fireWoodScript= GetComponent<CollectFirewood>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (taskList.activeSelf == true)
         {
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpHammer, hammer, cam);
         }
-    }
 
-    private void Update()
-    {
-        if (hammer.activeSelf == false && fireWoodScript.fireWood1.activeSelf == false && fireWoodScript.fireWood2.activeSelf == false
+        if (hammer.activeSelf == false && fireWoodScript.fireWood1.activeSelf == true && fireWoodScript.fireWood2.activeSelf == true
+            && fireWoodScript.fireWood3.activeSelf == true && fireWoodScript.fireWood4.activeSelf == true && fireWoodScript.fireWood5.activeSelf == true ){
+            taskText.text = "- Find and collect 5 piles of Firewood near the shed";
+        }
+
+        else if (hammer.activeSelf == false && fireWoodScript.fireWood1.activeSelf == false && fireWoodScript.fireWood2.activeSelf == false
             && fireWoodScript.fireWood3.activeSelf == false && fireWoodScript.fireWood4.activeSelf == false && fireWoodScript.fireWood5.activeSelf == false )
         {
             taskList.SetActive(false);
             investigateNoiseUI.SetActive(true);
             pickUpHammer.SetActive(false);
+            pickUpFireWood.SetActive(false);
+
         }
     }
 }

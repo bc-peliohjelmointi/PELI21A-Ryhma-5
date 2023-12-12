@@ -10,20 +10,16 @@ public class CollectTaskNote : MonoBehaviour
     [SerializeField] GameObject taskList;
     [SerializeField] GameObject note;
     [SerializeField] GameObject pickUpNote;
-    //EatFood eatFoodScript;
     Camera cam;
     Vector3 mousePos;
 
     private void Start()
     {
         cam = Camera.main;
-        //eatFoodScript = GetComponent<EatFood>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        //eatFoodScript.InteractWithObjects(mousePos, mask, pickUpNote, note, cam);
-
         mousePos = Input.mousePosition;
         mousePos.z = 100f;
         mousePos = cam.ScreenToWorldPoint(mousePos);

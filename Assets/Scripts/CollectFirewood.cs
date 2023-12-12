@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CollectFirewood : MonoBehaviour
 {
     [SerializeField] LayerMask mask;
     [SerializeField] GameObject taskList;
+    [SerializeField] TMP_Text taskText;
     public GameObject fireWood1;
     public GameObject fireWood2;
     public GameObject fireWood3;
@@ -15,14 +17,16 @@ public class CollectFirewood : MonoBehaviour
     EatFood eatFoodScript;
     Camera cam;
     Vector3 mousePos;
+    CollectHammer hammerScript;
 
     private void Start()
     {
         cam = Camera.main;
         eatFoodScript = GetComponent<EatFood>();
+        hammerScript = GetComponent<CollectHammer>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (taskList.activeSelf == true)
         {
@@ -31,7 +35,10 @@ public class CollectFirewood : MonoBehaviour
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood3, cam);
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood4, cam);
             eatFoodScript.InteractWithObjects(mousePos, mask, pickUpFireWood, fireWood5, cam);
-           
+        }
+        if (fireWood1.activeSelf == false && fireWood2.activeSelf == false && fireWood3.activeSelf == false && fireWood4.activeSelf == false && fireWood5.activeSelf == false && hammerScript.hammer.activeSelf == true)
+        {
+            taskText.text = "- Retrieve hammer from the shed";       
         }
     }
 }

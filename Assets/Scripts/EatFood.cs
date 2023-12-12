@@ -14,7 +14,7 @@ public class EatFood : MonoBehaviour
     {
         cam = Camera.main;
     }
-    private void FixedUpdate()
+    private void Update()
     {
         InteractWithObjects(mousePos, mask, eatFoodUI, food, cam);
     }
