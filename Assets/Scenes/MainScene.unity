@@ -1275,6 +1275,42 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 8.91
       objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400036, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 400054, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.76
+      objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.5
@@ -1302,6 +1338,30 @@ PrefabInstance:
     - target: {fileID: 400058, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 10.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 400062, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400062, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400062, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400062, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 400062, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 400062, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.91
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: 8d44a8bf542ec854ab6a6c818ea10b8a, type: 3}
       propertyPath: m_LocalScale.x
@@ -3078,7 +3138,7 @@ HingeJoint:
   m_Anchor: {x: -2.39, y: 1.23, z: 3.12}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 440.2919, y: 5.0166492, z: 263.26102}
+  m_ConnectedAnchor: {x: -93.58475, y: 10.717487, z: -19.090672}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -3212,8 +3272,8 @@ Transform:
   m_GameObject: {fileID: 619313094}
   serializedVersion: 2
   m_LocalRotation: {x: 0.041444845, y: 0.70107836, z: 0.006903116, w: 0.71184534}
-  m_LocalPosition: {x: -105.07, y: 8.03, z: -31.57}
-  m_LocalScale: {x: 5.2, y: 3.3573527, z: 3.6874013}
+  m_LocalPosition: {x: -105.07, y: 8.23, z: -30.65}
+  m_LocalScale: {x: 4.8, y: 3.1, z: 3.6874013}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -10075,8 +10135,8 @@ MonoBehaviour:
     m_Bits: 4096
   taskList: {fileID: 1933378039}
   hammer: {fileID: 1994514116}
-  pickUpHammer: {fileID: 0}
-  investigateNoiseUI: {fileID: 0}
+  pickUpHammer: {fileID: 965538961}
+  investigateNoiseUI: {fileID: 356359716}
 --- !u!1001 &1205943416
 PrefabInstance:
   m_ObjectHideFlags: 0
