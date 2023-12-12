@@ -9653,7 +9653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   taskList: {fileID: 1933378039}
   fireWood1: {fileID: 1117825094}
   fireWood2: {fileID: 1253107149}
