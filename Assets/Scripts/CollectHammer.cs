@@ -15,6 +15,7 @@ public class CollectHammer : MonoBehaviour
     EatFood eatFoodScript;
     CollectFirewood fireWoodScript;
     Camera cam;
+    public GameObject monnsterScream;
     Vector3 mousePos;
 
     private void Start()
@@ -43,7 +44,7 @@ public class CollectHammer : MonoBehaviour
             investigateNoiseUI.SetActive(true);
             pickUpHammer.SetActive(false);
             pickUpFireWood.SetActive(false);
-
+            monnsterScream.SetActive(true);
         }
     }
 }
