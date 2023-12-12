@@ -16,10 +16,7 @@ public class EatFood : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            InteractWithObjects(mousePos, mask, eatFoodUI, food, cam);
-        }
+        InteractWithObjects(mousePos, mask, eatFoodUI, food, cam);
     }
 
     public void InteractWithObjects(Vector3 pos, LayerMask mask, GameObject UI, GameObject item, Camera cam)
