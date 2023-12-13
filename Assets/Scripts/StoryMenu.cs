@@ -8,5 +8,6 @@ public class StoryMenu : MonoBehaviour
     public void ContinueGame()
     {
         SceneManager.LoadScene(1);
+        Cursor.visible = false;
     }
 }
