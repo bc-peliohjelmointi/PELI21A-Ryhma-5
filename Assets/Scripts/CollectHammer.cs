@@ -12,6 +12,8 @@ public class CollectHammer : MonoBehaviour
     [SerializeField] GameObject investigateNoiseUI;
     [SerializeField] TMP_Text taskText;
     [SerializeField] GameObject pickUpFireWood;
+    [SerializeField] GameObject monsterActivation;
+    [SerializeField] GameObject friend;
     EatFood eatFoodScript;
     CollectFirewood fireWoodScript;
     Camera cam;
@@ -45,6 +47,8 @@ public class CollectHammer : MonoBehaviour
             pickUpHammer.SetActive(false);
             pickUpFireWood.SetActive(false);
             monnsterScream.SetActive(true);
+            monsterActivation.SetActive(true);
+            friend.SetActive(false);
         }
     }
 }

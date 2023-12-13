@@ -4566,6 +4566,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &911612213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911612215}
+  - component: {fileID: 911612214}
+  - component: {fileID: 911612216}
+  m_Layer: 0
+  m_Name: MonsterActivationTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &911612214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911612213}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 33.713932, y: 1, z: 5.0011883}
+  m_Center: {x: 12.523413, y: 0, z: -1.213658}
+--- !u!4 &911612215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911612213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.16079803, z: -0, w: 0.98698735}
+  m_LocalPosition: {x: 40.4, y: 6.38, z: 62.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 18.506, z: 0}
+--- !u!114 &911612216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911612213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e1471f4028f9142921339ced4f8de9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monster: {fileID: 1431384318}
+  backToCarUI: {fileID: 1515251993}
+  investigateNoiseUI: {fileID: 356359716}
 --- !u!1 &928391477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b8633c9de8ff944469ddecefa43b4461, type: 3}
@@ -10714,6 +10783,8 @@ MonoBehaviour:
   investigateNoiseUI: {fileID: 356359716}
   taskText: {fileID: 1627066723}
   pickUpFireWood: {fileID: 168789114}
+  monsterActivation: {fileID: 911612213}
+  friend: {fileID: 1639354833}
   monnsterScream: {fileID: 248918844}
 --- !u!1001 &1205943416
 PrefabInstance:
@@ -17216,7 +17287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -19253,3 +19324,4 @@ SceneRoots:
   - {fileID: 1215768773}
   - {fileID: 1487724774}
   - {fileID: 248918846}
+  - {fileID: 911612215}
