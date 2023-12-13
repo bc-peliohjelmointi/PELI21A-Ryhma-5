@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ActivateMonster : MonoBehaviour
 {
     [SerializeField] GameObject monster;
@@ -20,7 +19,7 @@ public class ActivateMonster : MonoBehaviour
 
     private void Update()
     {
-        if(backToCarUI.activeSelf == true)
+        if(backToCarUI.activeSelf)
         {
             investigateNoiseUI.SetActive(false);
         }

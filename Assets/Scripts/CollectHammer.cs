@@ -19,6 +19,7 @@ public class CollectHammer : MonoBehaviour
     Camera cam;
     public GameObject monnsterScream;
     Vector3 mousePos;
+    private bool tasksDone = false;
 
     private void Start()
     {
@@ -43,12 +44,20 @@ public class CollectHammer : MonoBehaviour
             && fireWoodScript.fireWood3.activeSelf == false && fireWoodScript.fireWood4.activeSelf == false && fireWoodScript.fireWood5.activeSelf == false )
         {
             taskList.SetActive(false);
-            investigateNoiseUI.SetActive(true);
             pickUpHammer.SetActive(false);
             pickUpFireWood.SetActive(false);
             monnsterScream.SetActive(true);
             monsterActivation.SetActive(true);
             friend.SetActive(false);
+            tasksDone = true;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (tasksDone)
+        {
+            investigateNoiseUI.SetActive(true);
         }
     }
 }
