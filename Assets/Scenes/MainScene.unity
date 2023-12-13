@@ -562,7 +562,7 @@ MonoBehaviour:
     that I happen to have some spare french fries and soda inside. Go grab yourself
     a bite.'
   - 'Friend: Oh and after you''re done eating you don''t mind helping me a bit here?'
-  - 'Me: Not at all, what do need?'
+  - 'Me: Not at all, what do you need?'
   - 'Friend: I left a task note at the table in the cabin 50 meters from here. Just
     follow the path to the cabin and you will find it.'
   dialogueActive: 0
@@ -19091,7 +19091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Investigate noise?'
+  m_text: '- Investigate noise from radiohouse?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
