@@ -13,7 +13,7 @@ public class AIController : MonoBehaviour
     public AudioSource Scream;
     public GameObject JumpZombie;
     public GameObject flashImg;
-    public int MoveSpeed = 9;
+    public float MoveSpeed = 7.5f;
     int MaxDist = 100;
     int MinDist = 0;
 
