@@ -37,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
         if(dialogueBox.activeSelf == false)
         {
             FPSInput.MoveSpeed = 4;
-            FPSInput.SprintSpeed = 8;
+            FPSInput.SprintSpeed = 6;
         }
     }
 
