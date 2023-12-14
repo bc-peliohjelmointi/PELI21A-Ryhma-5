@@ -16748,7 +16748,7 @@ MonoBehaviour:
   Scream: {fileID: 310638225}
   JumpZombie: {fileID: 1025320706}
   flashImg: {fileID: 182617388}
-  MoveSpeed: 6.15
+  MoveSpeed: 6.25
 --- !u!82 &1431384328
 AudioSource:
   m_ObjectHideFlags: 0
