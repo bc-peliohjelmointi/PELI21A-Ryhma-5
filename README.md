@@ -10,4 +10,4 @@ WASD for movement, E for interact, mouse for looking around, mouse1 to skip to t
 Please note that the best possible playing experience comes with having volume up and using headphones.
 
 # Playtime length
-This game takes on average about 5-10 minutes to complete depending on how much you explore.
+This game takes on average about 5-10 minutes to complete depending on how much you explore the enviroment.
