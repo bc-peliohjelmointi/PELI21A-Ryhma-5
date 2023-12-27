@@ -1,7 +1,7 @@
 # Hollowbrook Forest
 
 # Introduction
-3D Horror game that takes place in a dark and eerie forest where you think you might be safe with your friend, but are you really? 
+3D Horror game made by 2 people, that takes place in a dark and eerie forest where you think you might be safe with your friend, but are you really? 
 
 # Controls
 WASD for movement, E for interact, mouse1 to skip to the next dialogue when talking to the NPC.
